@@ -42,21 +42,18 @@ var startTime = () => {
     }
     if (seconds == 0 && (minutes > 0 || hours > 0)) {
       seconds = 60;
-      console.log(`seconds + ${seconds}`);
     }
     seconds = seconds.toString().padStart(2, "0");
     document.getElementById("seconds").innerHTML = seconds;
     if (minutes > 0 && seconds == 60) {
       seconds = 60;
       minutes--;
-      console.log(`minutes + ${minutes}`);
     }
     minutes = minutes.toString().padStart(2, "0");
     document.getElementById("minutes").innerHTML = minutes;
     if (hours > 0 && minutes == 0) {
       minutes = 59;
       hours--;
-      console.log(`hours + ${hours}`);
     }
     hours = hours.toString().padStart(2, "0");
     document.getElementById("hours").innerHTML = hours;
