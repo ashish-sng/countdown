@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time's UP</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="time">
+            <span id="hours">00</span><span>hr</span>:<span id="minutes">00</span><span>min</span>:<span
+                id="seconds">00</span><span>sec</span>
+        </div>
+        <div class="user">
+            <div class="top">
+                <input id="hour" type="number" min="0" max="24" placeholder="00" value="0">
+                <input id="minute" type="number" min="0" max="60" placeholder="00" value="0">
+                <input id="second" type="number" min="0" max="60" placeholder="00" value="0">
+            </div>
+            <div class="bottom">
+                <span>Hours</span>
+                <span>Minutes</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="start">Start</button>
+            <button type="button" id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

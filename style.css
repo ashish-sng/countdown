@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+    background-image: url("./timer.jpg");
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: 150px;
+    display: flex;
+}
+
+span {
+    padding-top: 14px;
+}
+
+.user {
+    height: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+.buttons {
+    height: 100px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#start,
+#reset {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
