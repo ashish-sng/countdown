@@ -61,3 +61,31 @@ input {
     border: none;
     cursor: pointer;
 }
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    transform: translate(-5%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-5%, -50%) scale(1);
+}
+
+img {
+    height: 400px;
+    width: 350px;
+    background: transparent;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

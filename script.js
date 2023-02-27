@@ -1,6 +1,8 @@
 var seconds = document.getElementById("seconds").innerHTML;
 var minutes = document.getElementById("minutes").innerHTML;
 var hours = document.getElementById("hours").innerHTML;
+var popup = document.getElementById("popup");
+var close = document.getElementById("close");
 
 const audio = new Audio("alarm.mp3");
 
@@ -21,16 +23,6 @@ var resetToZero = () => {
   seconds = 00;
   minutes = 00;
   hours = 00;
-  setInterval(() => {
-    audio.pause();
-  }, 3000);
-  clearInterval(timer);
-};
-
-var stop = () => {
-  seconds = 00;
-  minutes = 00;
-  hours = 00;
   clearInterval(timer);
 };
 
@@ -38,6 +30,7 @@ var startTime = () => {
   timer = setInterval(() => {
     if (seconds == 0 && minutes == 00 && hours == 00) {
       audio.play();
+      add();
       resetToZero();
     }
     if (seconds == 0 && (minutes > 0 || hours > 0)) {
@@ -77,4 +70,14 @@ reset.addEventListener("click", () => {
   document.getElementById("hours").innerHTML = hours;
 
   clearInterval(timer);
+});
+
+var add = () => {
+  popup.classList.add("open-popup");
+};
+
+close.addEventListener("click", () => {
+  resetToZero();
+  audio.pause();
+  popup.classList.remove("open-popup");
 });
